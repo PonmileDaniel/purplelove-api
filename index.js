@@ -7,6 +7,9 @@ const morgan = require("morgan");
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/post");
+const cors = require('cors');
+
+
 
 //To upload Multiple Files
 const multer = require("multer")
@@ -14,6 +17,12 @@ const path = require("path")
 
 dotenv.config();
 
+
+//Middleware
+app.use(cors({
+    origin: 'https://purplelove.onrender.com'
+  }));
+  
 
 //How to connect to Mongodb
 mongoose.connect( process.env.MONGO_URL , { useNewUrlParser: true, useUnifiedTopology: true });
