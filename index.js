@@ -20,7 +20,7 @@ dotenv.config();
 
 //Middleware
 app.use(cors({
-    origin: 'https://purplelove.onrender.com/api'
+    origin: 'https://purplelove.onrender.com'
   }));
   
 
